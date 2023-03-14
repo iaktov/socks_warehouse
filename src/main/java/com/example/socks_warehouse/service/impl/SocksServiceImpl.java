@@ -62,14 +62,18 @@ public class SocksServiceImpl implements SocksService {
     }
 
     @Override
-    public Integer getSocks(String color, ComparisonOperationEnum operation, int cottonPart) {
+    public int getSocks(String color, ComparisonOperationEnum operation, int cottonPart) {
 
         logger.info("Was invoked getSocks");
         Collection<Socks> socks = new ArrayList<>();
         switch (operation) {
             case equal:
                 Optional<Socks> equalSocks = socksRepository.findByColorIgnoreCaseAndCottonPart(color, cottonPart);
-                return equalSocks.get().getQuantity();
+                if (equalSocks.isPresent()) {
+                    return equalSocks.get().getQuantity();
+                } else {
+                    return 0;
+                }
             case lessThan:
                 socks = socksRepository.findByColorIgnoreCaseAndCottonPartBefore(color, cottonPart);
             case moreThan:

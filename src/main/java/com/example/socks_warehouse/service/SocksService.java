@@ -10,5 +10,5 @@ public interface SocksService {
 
     void outcomeSocks(SocksDto socksDto);
 
-    Integer getSocks(String color, ComparisonOperationEnum operation, int cottonPart);
+    int getSocks(String color, ComparisonOperationEnum operation, int cottonPart);
 }

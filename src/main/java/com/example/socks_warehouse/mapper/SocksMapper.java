@@ -11,9 +11,9 @@ import org.mapstruct.MappingConstants;
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING, injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface SocksMapper {
 
-//    @Mapping(target = "color", source = "color")
-//    @Mapping(target = "cottonPart", source = "cottonPart")
-//    SocksDto toDto(Socks socks);
+    @Mapping(target = "color", source = "color")
+    @Mapping(target = "cottonPart", source = "cottonPart")
+    SocksDto toDto(Socks socks);
 
 
     @Mapping(target = "color", source = "color")
