@@ -4,9 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+@Entity(name = "socks_warehouse")
 @Data
-@Entity
-@Table(name = "socks_warehouse")
 public class Socks {
 
     @Id

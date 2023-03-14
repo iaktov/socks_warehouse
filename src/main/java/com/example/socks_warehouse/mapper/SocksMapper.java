@@ -18,6 +18,6 @@ public interface SocksMapper {
 
     @Mapping(target = "color", source = "color")
     @Mapping(target = "cottonPart", source = "cottonPart")
-    Socks toEntity(SocksDto socksStockDto);
+    Socks toEntity(SocksDto socksDto);
 
 }

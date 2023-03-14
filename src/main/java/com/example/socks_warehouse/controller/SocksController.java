@@ -14,8 +14,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
 @RequiredArgsConstructor
+@RestController
 @RequestMapping("/api/socks")
 public class SocksController {
 
@@ -48,7 +48,7 @@ public class SocksController {
                             "(for example, the database is unavailable).")
             })
     @PostMapping("/income")
-    public ResponseEntity<SocksDto> incomeSocksToWarehouse(@RequestBody SocksDto socksDto) {
+    public ResponseEntity<SocksDto> incomeSocksToWarehouse( @RequestBody SocksDto socksDto) {
         logger.info("Was invoked incomeSocksToWarehouse method");
         socksService.incomeSocks(socksDto);
         return ResponseEntity.ok().build();

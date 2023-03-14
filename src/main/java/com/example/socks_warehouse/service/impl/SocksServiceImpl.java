@@ -62,7 +62,7 @@ public class SocksServiceImpl implements SocksService {
     }
 
     @Override
-    public int getSocks(String color, ComparisonOperationEnum operation, int cottonPart) {
+    public int getSocks(String color, ComparisonOperationEnum operation, Integer cottonPart) {
 
         logger.info("Was invoked getSocks");
         Collection<Socks> socks = new ArrayList<>();
